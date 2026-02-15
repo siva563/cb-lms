@@ -1,0 +1,11 @@
+{
+  "name": "codebegun-lms",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "npm run dev -w @cb/api & npm run dev -w @cb/web",
+    "build": "npm run build -w @cb/web && npm run build -w @cb/api",
+    "lint": "npm run lint -w @cb/web && npm run lint -w @cb/api",
+    "test": "npm run test -w @cb/api"
+  }
+}
